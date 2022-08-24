@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>bankPwa</title>
+    <link rel="shortcut icon" href="./assets/icons/icon-128x128.png">
+     <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="white">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="white">
+</head>
+<body>
+    <div class="codeArea">
+        <div class="htmlBlock">
+            <p class="title">HTML</p>
+            <div class="baliseDiv">
+                <select name="balisesHtml" id="balisesHtml">
+                    <option value="0">balises</option>
+                    <option value="1" class="h1Balise" id="h1Balise">h1</option>
+                    <option value="2" class="divBalise" id="divBalise">div</option>
+                    <option value="3" class="pBalise" id="pBalise">p</option>
+                    <option value="4" class="aBalise" id="aBalise">a</option>
+                    <option value="5" class="brBalise" id="brBalise">br</option>
+                    <option value="6" class="buttonBalise" id="buttonBalise">button</option>
+                    <option value="7" class="imgBalise" id="imgBalise">img</option>
+                </select>
+            </div>
+            <div id="htmlCounter">  /  </div>
+            <div class="htmlProgressBar" id="htmlProgressBar"></div>
+            <div class="html">
+                <textarea id="htmlText" name="htmlText" oninput="MaxLengthTextarea(this);"
+                onkeyup="live()"></textarea>
+            </div>
+            <div class="htmlHidden"><textarea id="htmlHidden"></textarea></div>
+        </div>
+        <div class="cssBlock">
+            <p class="title">CSS</p>
+            <div class="baliseDiv">
+                <select name="balisesCss" id="balisesCss">
+                    <option  value="0">colors</option>
+                    <option value="1" class="redBalise" id="redBalise">red</option>
+                    <option value="2" class="blueBalise" id="blueBalise">blue</option>
+                    <option value="3" class="greenBalise" id="greenBalise">green</option>
+                    <option value="4" class="pinkBalise" id="pinkBalise">pink</option>
+                    <option value="5" class="blackBalise" id="blackBalise">black</option>
+                    <option value="6" class="yellowBalise" id="yellowBalise">yellow</option>
+                    <option value="7" class="orangeBalise" id="orangeBalise">orange</option>
+                </select>
+                <select name="balisesCssOther" id="balisesCssOther">
+                    <option  value="0">other</option>
+                    <option value="1" class="fontSize" id="fontSize">font-size</option>
+                    <option value="2" class="bcgClr" id="bcgClr">bcg-clr</option>
+                    <option value="3" class="position" id="position">position</option>
+                    <option value="4" class="width" id="width">width</option>
+                    <option value="5" class="height" id="height">height</option>
+                    <option value="6" class="margin" id="margin">margin</option>
+                    <option value="7" class="padding" id="padding">padding</option>
+                </select>
+            </div>
+            <div id="cssCounter">  /  </div>
+            <div class="cssProgressBar" id="cssProgressBar"></div>
+            <div class="css">
+                <textarea id="cssText" name="cssText" oninput="MaxLengthTextarea(this);"
+                onkeyup="live()"></textarea>
+            </div>
+        </div>
+        <div class="jsBlock">
+            <p class="title">JS</p>
+            <div class="baliseDiv">
+                <select name="balisesJs" id="balisesJs">
+                    <option value="0">balises</option>
+                    <option value="1" class="function" id="function">function</option>
+                    <option value="2" class="querySelector" id="querySelector">querySelector</option>
+                    <option value="3" class="eventListener" id="eventListener">eventListener</option>
+                    <option value="4" class="ifElse" id="ifElse">if else</option>
+                </select>
+            </div>
+            <div id="jsCounter">  /  </div>
+            <div class="jsProgressBar" id="jsProgressBar"></div>
+            <div class="js">
+                <textarea id="jsText" name="jsText" oninput="MaxLengthTextarea(this);"
+                onkeyup="live()"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="loader" id="loader">
+        <div class="containerCircle" id="containerCircle">
+            <div class="cercle1" id="cercle1">
+                <div class="cercle2" id="cercle2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe class="codeLive" id="codeLive"></iframe>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
